@@ -1,0 +1,21 @@
+.homeContainer {
+  height: 100vh;
+}
+.nav {
+  height: 2.5em;
+}
+.arrowContainer {
+  .link {
+    text-decoration: none;
+  }
+}
+.homeContent {
+  height: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  img {
+    height: 400px;
+    width: 600px;
+  }
+}

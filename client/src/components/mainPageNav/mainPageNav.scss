@@ -1,0 +1,22 @@
+.formContainer {
+  margin-bottom: 1em;
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  input {
+    width: 15em;
+    height: 2em;
+    border-radius: 5em;
+    outline: none;
+    margin-right: 1em;
+  }
+  button {
+    margin-left: 1em;
+    border-radius: 5em;
+    padding: 0.5em;
+    color: white;
+    background-color: transparent;
+    border: 2px #fff solid;
+  }
+}

@@ -1,0 +1,24 @@
+.businessContainer {
+  margin: 0.5em;
+  background-color: transparent;
+  border: 2px #fff solid;
+  border-radius: 2em;
+  width: 25em;
+  padding: 1em;
+}
+.imgContainer {
+  img {
+    margin: 0.5em;
+    height: 200px;
+    width: 200px;
+    border-radius: 1em;
+  }
+}
+.dataContainer {
+  width: 50%;
+  //   background-color: red;
+  margin: 0 auto;
+  display: flex;
+  //   align-items: flex-start;
+  justify-content: space-between;
+}
