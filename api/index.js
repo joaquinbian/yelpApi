@@ -8,15 +8,16 @@ app.use(cors());
 app.get("/business", (req, res) => {
   const { location } = req.query;
   axios
-    .get(api, {
+    .get(`${api}`, {
       headers: { Authorization: `Bearer ${token}` },
-      params: { location: location },
+      params: { location },
     })
     .then(({ data }) => {
       const { businesses } = data;
       res.json(businesses);
     })
     .catch((err) => {
+      console.log(err);
       res.status(400).send(err);
     });
 });
