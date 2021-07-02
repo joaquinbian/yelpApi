@@ -8,8 +8,9 @@ app.use(cors());
 app.get("/business", (req, res) => {
   const { location } = req.query;
   axios
-    .get(`${api}?location=${location}`, {
+    .get(api, {
       headers: { Authorization: `Bearer ${token}` },
+      params: { location: location },
     })
     .then(({ data }) => {
       const { businesses } = data;
