@@ -1,8 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+$fontCursive: "Dancing Script";
+
 .homeContainer {
   height: 100vh;
 }
 .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 2.5em;
+  padding-top: 0.5em;
+  h4 {
+    font-family: $fontCursive;
+    font-size: 3em;
+    margin-right: 0.5em;
+  }
+  img {
+    width: 2em;
+  }
 }
 .arrowContainer {
   .link {
@@ -14,6 +30,11 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  .title {
+    display: inline;
+    font-family: $fontCursive;
+    font-size: 3.5em;
+  }
   img {
     height: 400px;
     width: 600px;

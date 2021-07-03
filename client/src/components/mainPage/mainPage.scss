@@ -5,6 +5,31 @@ $fontCursive: "Dancing Script";
 .mainPageContainer {
   min-height: 100vh auto;
 }
+.headerPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-family: $fontCursive;
+    font-size: 3em;
+  }
+  .homeIcon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    &:hover {
+      color: white;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .icon {
+      margin-right: 0.5em;
+      height: 1.5em;
+      width: 1.5em;
+    }
+  }
+}
 .infoContainer {
   margin-top: 1.5em;
   h1 {

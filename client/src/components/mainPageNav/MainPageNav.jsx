@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getAll } from "../../actions/actionsCreators";
 import { motion } from "framer-motion";
+
 import "./mainPageNav.scss";
 
 function MainPageNav({ setLoading, setSelect }) {

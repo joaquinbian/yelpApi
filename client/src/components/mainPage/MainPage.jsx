@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { motion, AnimatePresence } from "framer-motion";
+import { AiOutlineHome } from "react-icons/ai";
+
 import Business from "../business/Business";
 import MainPageNav from "../mainPageNav/MainPageNav";
 import { sortBy } from "../../actions/actionsCreators";
+import { useHistory } from "react-router-dom";
 
 import "./mainPage.scss";
 
@@ -13,6 +16,8 @@ const MainPage = () => {
 
   const business = useSelector((state) => state.businesses);
   const dispatch = useDispatch();
+
+  const history = useHistory();
 
   const pageVariant = {
     hidden: {
@@ -56,7 +61,13 @@ const MainPage = () => {
       animate="show"
       className="mainPageContainer"
     >
-      <h1>Search a city (f.e: San francisco)</h1>
+      <div className="headerPage">
+        <div className="homeIcon" onClick={() => history.goBack()}>
+          <AiOutlineHome className="icon" />
+          <h5>Back home</h5>
+        </div>
+        <h1 className="title">Search a city (f.e: San francisco)</h1>
+      </div>
       <MainPageNav setLoading={setLoading} setSelect={setSelect} />
       <div className="infoContainer">
         <AnimatePresence>

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Rating from "react-rating";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import noImg from "../../assets/img/no-image.png";
 import "./business.scss";
 
 const Business = ({ name, img, rating, reviews }) => {
@@ -23,7 +24,7 @@ const Business = ({ name, img, rating, reviews }) => {
             x: 0,
             transition: { ease: "easeInOut", delay: 1, duration: 0.5 },
           }}
-          src={img}
+          src={img ? img : noImg}
           alt="businessImg"
         />
       </div>
