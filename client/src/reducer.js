@@ -17,14 +17,14 @@ const rootReducer = (state = initialState, action) => {
       console.log("ente aca lowest");
       return {
         ...state,
-        businesses: state.businesses.slice().sort(baseyianSort).reverse(),
+        businesses: state.businesses.slice().sort(baseyianSort),
       };
     }
     case SORT_HIGHEST: {
       console.log("ente aca highes");
       return {
         ...state,
-        businesses: state.businesses.slice().sort(baseyianSort),
+        businesses: state.businesses.slice().sort(baseyianSort).reverse(),
       };
     }
 
