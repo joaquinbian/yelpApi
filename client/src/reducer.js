@@ -17,19 +17,18 @@ const rootReducer = (state = initialState, action) => {
       console.log("ente aca lowest");
       return {
         ...state,
-        businesses: state.businesses.sort(baseyianSort).reverse(),
+        businesses: state.businesses.slice().sort(baseyianSort).reverse(),
       };
     }
     case SORT_HIGHEST: {
       console.log("ente aca highes");
       return {
         ...state,
-        businesses: state.businesses.sort(baseyianSort),
+        businesses: state.businesses.slice().sort(baseyianSort),
       };
     }
 
     default:
-      console.log("aca estoy");
       return {
         ...state,
         businesses: [...state.businessesReplacement],
