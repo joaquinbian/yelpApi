@@ -10,7 +10,7 @@ app.get("/business", (req, res) => {
   axios
     .get(`${api}`, {
       headers: { Authorization: `Bearer ${token}` },
-      params: { location },
+      params: { location, term: "parking" },
     })
     .then(({ data }) => {
       const { businesses } = data;
